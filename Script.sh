@@ -6,7 +6,8 @@ set +x
 # Clone Dockerfile of the <Module> - $2 is Gitlab root passowrd 
 git clone https://rahulgaajula:We!come123@github.com/rahulgaajula/devopsDimage.git || exit 1  
 
-# Build Docker image of <Module> - $1 is module name 
+# Build Docker image of <Module> - $1 is module name
+chmod -R -755 devopsDimage
 cd devopsDimage || exit 1 
 
 docker build --no-cache=true -t devopsDimage . || exit 1  
