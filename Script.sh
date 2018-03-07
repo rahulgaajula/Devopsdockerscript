@@ -7,10 +7,10 @@ set +x
 git clone https://rahulgaajula:We!come123@github.com/rahulgaajula/devopsDimage.git || exit 1  
 
 # Build Docker image of <Module> - $1 is module name
-chmod -R -755 devopsDimage
+chmod -R 755 devopsDimage
 cd devopsDimage || exit 1 
 
-docker build --no-cache=true -t devopsDimage . || exit 1  
+docker build --no-cache=true -t devopshelloimage . || exit 1  
 
 cd .. && rm -rf devopsDimage || exit 1  
 
