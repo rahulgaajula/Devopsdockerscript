@@ -14,15 +14,16 @@ docker build --no-cache=true -t devopshelloimage . || exit 1
 
 cd .. && rm -rf devopsDimage || exit 1  
 
-# Login to Nexus3(Docker Image Repository) - $3 is Nexus3 Admin password 
+# Login to Nexus3(Docker Image Repository) - $3 is Nexus3 Admin password
 
-#docker login -u admin -p $1 172.25.30.39:8123 || exit 1  
+docker login -u admin -p admin123 diwo.teranetworks.com:8123|| exit 1
 
-# Tag the docker image of <Module> 
+# Tag the docker image of <Module>
 
-#docker tag devopsDimage:latest 172.25.30.39:8123/devopsDimage:latest || exit 1  
+docker tag  devopshelloimage:latest diwo.teranetworks.com:8123/devopshelloimage:latest || exit 1
 
-# Push the docker image of <Module> 
+# Push the docker image of <Module>
 
-#docker push 172.25.30.39:8123/devopsDimage:latest || exit 1
+docker push diwo.teranetworks.com:8123/devopshelloimage:latest || exit 1
+
 
